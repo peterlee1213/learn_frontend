@@ -11,7 +11,9 @@ services:
       - test-network
     working_dir: /code
     volumes:
+      # directory mapping for codebase
       - /home/zheng/node20:/code
+      # sharing git credentials
       - /home/zheng/.ssh:/root/.ssh
 
 networks:
