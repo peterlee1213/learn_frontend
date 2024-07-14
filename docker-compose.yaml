@@ -1,0 +1,19 @@
+services:
+  test-node20:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 3002:3002
+    networks:
+      - test-network
+    working_dir: /code
+    volumes:
+      - /home/zheng/node20:/code
+      - /home/zheng/.ssh:/root/.ssh
+
+networks:
+  test-network:
+    external: true

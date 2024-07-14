@@ -1,0 +1,29 @@
+{
+    "name": "test-node20",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "forwardPorts": [
+        "3000:3000",
+        "3001:3001",
+        "3002:3002"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dsznajder.es7-react-js-snippets",
+                "ms-vscode.vscode-typescript-next",
+                "yzhang.markdown-all-in-one",
+                "PulkitGangwar.nextjs-snippets",
+                "bradlc.vscode-tailwindcss",
+                "redhat.vscode-yaml"
+            ]
+        }
+    },
+    // Default path to open when attaching to a new container.
+    "workspaceFolder": "/code",
+    // container镜像名称为《文件夹名称》+《service名称》，这里的service名称对应的是docker-compose.yaml文件中的service名称
+    "service": "test-node20",
+    // container启动之后执行的命令
+    "postStartCommand": "sudo chown -R root:root /code",
+    // 以root用户身份登陆此container
+    "remoteUser": "root"
+}
