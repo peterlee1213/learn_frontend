@@ -1,0 +1,3 @@
+文件夹下有page.js或page.tsx才是可路由的
+
+当前目录下的invisible_route是不可路由的，因为其下没有page.tsx
