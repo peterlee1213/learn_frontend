@@ -15,7 +15,10 @@
                 "PulkitGangwar.nextjs-snippets",
                 "bradlc.vscode-tailwindcss",
                 "redhat.vscode-yaml"
-            ]
+            ],
+            "settings": {
+                "workbench.editor.wrapTabs": true
+            }
         }
     },
     // Default path to open when attaching to a new container.
